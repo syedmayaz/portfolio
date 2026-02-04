@@ -1,31 +1,25 @@
 'use client';
 import { Logo } from '@/components/logo';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/textarea';
-import { useToast } from '@/hooks/use-toast';
-import { Github, Linkedin, Twitter } from 'lucide-react';
+import {
+  Github,
+  Linkedin,
+  Twitter,
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+} from 'lucide-react';
 
 export function Footer() {
-  const { toast } = useToast();
-
-  const handleInquirySubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    toast({
-      title: 'Inquiry Sent!',
-      description: "Thanks for reaching out. We'll get back to you shortly.",
-    });
-    (e.target as HTMLFormElement).reset();
-  };
-
   return (
     <footer id="contact" className="w-full border-t">
       <div className="container grid grid-cols-1 gap-8 px-4 py-12 md:grid-cols-2 md:px-6 lg:grid-cols-3">
         <div className="space-y-4">
           <Logo />
           <p className="max-w-xs text-sm text-muted-foreground">
-            Streamlining your finances with expert freelance accounting services.
+            Streamlining your finances with expert freelance accounting
+            services.
           </p>
           <div className="flex gap-2">
             <Button variant="ghost" size="icon" asChild>
@@ -46,37 +40,60 @@ export function Footer() {
           </div>
         </div>
         <div className="lg:col-span-2">
-          <h3 className="font-headline text-2xl font-bold">Have a Question?</h3>
+          <h3 className="font-headline text-2xl font-bold">Get In Touch</h3>
           <p className="mb-4 text-muted-foreground">
-            Fill out the form below and we&apos;ll get back to you as soon as
-            possible.
+            Let&apos;s Discuss Your Financial Goals
           </p>
-          <form className="space-y-4" onSubmit={handleInquirySubmit}>
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-              <div className="space-y-2">
-                <Label htmlFor="name">Name</Label>
-                <Input id="name" placeholder="Your Name" required />
+          <p className="mb-6 max-w-[600px] text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed">
+            Ready to take control of your finances? Schedule a free consultation
+            to discuss how I can help your business thrive.
+          </p>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+            <div className="space-y-4">
+              <div className="flex items-start gap-4">
+                <Phone className="mt-1 h-6 w-6 text-primary" />
+                <div>
+                  <h4 className="font-semibold">Phone</h4>
+                  <a
+                    href="tel:+923333720307"
+                    className="text-muted-foreground hover:text-foreground"
+                  >
+                    (+92333) 372-0307
+                  </a>
+                </div>
               </div>
-              <div className="space-y-2">
-                <Label htmlFor="email">Email</Label>
-                <Input
-                  id="email"
-                  type="email"
-                  placeholder="your@email.com"
-                  required
-                />
+              <div className="flex items-start gap-4">
+                <Mail className="mt-1 h-6 w-6 text-primary" />
+                <div>
+                  <h4 className="font-semibold">Email</h4>
+                  <a
+                    href="mailto:sarah@mitchellcpa.com"
+                    className="text-muted-foreground hover:text-foreground"
+                  >
+                    sarah@mitchellcpa.com
+                  </a>
+                </div>
               </div>
             </div>
-            <div className="space-y-2">
-              <Label htmlFor="message">Message</Label>
-              <Textarea
-                id="message"
-                placeholder="Your message or inquiry"
-                required
-              />
+            <div className="space-y-4">
+              <div className="flex items-start gap-4">
+                <MapPin className="mt-1 h-6 w-6 text-primary" />
+                <div>
+                  <h4 className="font-semibold">Office</h4>
+                  <p className="text-muted-foreground">
+                    123 Financial District, Suite 400
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <Clock className="mt-1 h-6 w-6 text-primary" />
+                <div>
+                  <h4 className="font-semibold">Hours</h4>
+                  <p className="text-muted-foreground">Mon-Fri: 9am - 5pm</p>
+                </div>
+              </div>
             </div>
-            <Button type="submit">Send Inquiry</Button>
-          </form>
+          </div>
         </div>
       </div>
       <div className="border-t py-4">
