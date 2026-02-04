@@ -1,3 +1,4 @@
+'use client';
 import {
   Card,
   CardContent,
@@ -13,18 +14,21 @@ const services = [
     title: 'Bookkeeping',
     description:
       'Meticulous record-keeping to ensure your financial data is accurate, up-to-date, and organized.',
+    price: '$99/month',
   },
   {
     icon: <Calculator className="h-8 w-8 text-primary" />,
     title: 'Tax Preparation',
     description:
       'Expert tax planning and preparation to minimize liabilities and ensure full compliance with regulations.',
+    price: '$120/month',
   },
   {
     icon: <Users className="h-8 w-8 text-primary" />,
     title: 'Payroll Services',
     description:
       'Efficient and reliable payroll processing, handling everything from payments to tax filings.',
+    price: '$5/each employee',
   },
   {
     icon: <Landmark className="h-8 w-8 text-primary" />,
@@ -51,7 +55,14 @@ export function Services() {
           {services.map((service) => (
             <Card key={service.title}>
               <CardHeader>
-                {service.icon}
+                <div className="flex items-start justify-between">
+                  {service.icon}
+                  {service.price && (
+                    <div className="text-right text-sm font-semibold text-primary">
+                      {service.price}
+                    </div>
+                  )}
+                </div>
                 <CardTitle className="pt-4">{service.title}</CardTitle>
               </CardHeader>
               <CardContent>
