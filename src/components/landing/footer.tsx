@@ -18,7 +18,7 @@ export function Footer() {
         <div className="space-y-4">
           <Logo />
           <p className="max-w-xs text-sm text-muted-foreground">
-            Streamlining your finances with expert freelance accounting
+            Streamlining your finances with expert accounting
             services.
           </p>
           <div className="flex gap-2">
@@ -42,7 +42,7 @@ export function Footer() {
         <div className="lg:col-span-2">
           <h3 className="font-headline text-2xl font-bold">Get In Touch</h3>
           <p className="mb-4 text-muted-foreground">
-            Let&apos;s Discuss Your Financial Goals
+            Let's Discuss Your Financial Goals
           </p>
           <p className="mb-6 max-w-[600px] text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed">
             Ready to take control of your finances? Schedule a free consultation
@@ -67,10 +67,10 @@ export function Footer() {
                 <div>
                   <h4 className="font-semibold">Email</h4>
                   <a
-                    href="mailto:sarah@mitchellcpa.com"
+                    href="mailto:bookkeeping-expert@outlook.com"
                     className="text-muted-foreground hover:text-foreground"
                   >
-                    sarah@mitchellcpa.com
+                    bookkeeping-expert@outlook.com
                   </a>
                 </div>
               </div>
@@ -81,7 +81,7 @@ export function Footer() {
                 <div>
                   <h4 className="font-semibold">Office</h4>
                   <p className="text-muted-foreground">
-                    123 Financial District, Suite 400
+                    Scarborough ON
                   </p>
                 </div>
               </div>

@@ -4,7 +4,7 @@ import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
   title: 'syedayaz',
-  description: 'Streamlining your finances with expert freelance accounting services.',
+  description: 'Streamlining your finances with expert accounting services.',
 };
 
 export default function RootLayout({

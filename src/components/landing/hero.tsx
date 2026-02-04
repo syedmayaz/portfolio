@@ -10,7 +10,7 @@ export function Hero() {
               Clarity and Confidence in Your Finances
             </h1>
             <p className="mx-auto max-w-[700px] text-foreground/80 md:text-xl">
-              syedayaz offers expert freelance accounting services tailored
+              syedayaz offers expert accounting services tailored
               to your business needs. Get expert help with bookkeeping, tax
               preparation, payroll, and financial consulting.
             </p>
