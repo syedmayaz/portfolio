@@ -3,6 +3,9 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function About() {
   const aboutImage = PlaceHolderImages.find((img) => img.id === 'about-me');
+  const proAdvisorBadge = PlaceHolderImages.find(
+    (img) => img.id === 'quickbooks-proadvisor-badge'
+  );
 
   return (
     <section id="about" className="w-full py-12 md:py-24 lg:py-32">
@@ -14,17 +17,37 @@ export function About() {
                 Your Trusted Financial Partner
               </h2>
               <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                With over 15 years of experience serving small businesses and entrepreneurs, I understand the unique financial challenges you face. My approach combines personalized attention with strategic expertise.
+                With over 15 years of experience serving small businesses and
+                entrepreneurs, I understand the unique financial challenges you
+                face. My approach combines personalized attention with strategic
+                expertise.
               </p>
             </div>
             <div className="max-w-[600px] space-y-4 text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                <p>
-                I believe every business deserves access to professional accounting services that go beyond just crunching numbers. My goal is to be your financial partner, helping you make informed decisions that drive growth and profitability.
+              <p>
+                I believe every business deserves access to professional
+                accounting services that go beyond just crunching numbers. My
+                goal is to be your financial partner, helping you make informed
+                decisions that drive growth and profitability.
               </p>
               <p>
-                Whether you&apos;re a startup finding your footing or an established business looking to optimize, I&apos;m here to provide the clarity and guidance you need.
+                Whether you&apos;s a startup finding your footing or an
+                established business looking to optimize, I&apos;m here to
+                provide the clarity and guidance you need.
               </p>
             </div>
+            {proAdvisorBadge && (
+              <div className="mt-4">
+                <Image
+                  src={proAdvisorBadge.imageUrl}
+                  alt={proAdvisorBadge.description}
+                  data-ai-hint={proAdvisorBadge.imageHint}
+                  width={150}
+                  height={176}
+                  className="object-contain"
+                />
+              </div>
+            )}
           </div>
           <div className="flex items-center justify-center">
             {aboutImage && (
