@@ -81,7 +81,7 @@ export function Footer() {
       </div>
       <div className="border-t py-4">
         <p className="text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} AccountEase. All rights reserved.
+          © {new Date().getFullYear()} syedayaz. All rights reserved.
         </p>
       </div>
     </footer>

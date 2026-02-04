@@ -3,7 +3,7 @@ import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'AccountEase',
+  title: 'syedayaz',
   description: 'Streamlining your finances with expert freelance accounting services.',
 };
 
