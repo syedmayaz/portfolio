@@ -31,7 +31,7 @@ export function About() {
                 decisions that drive growth and profitability.
               </p>
               <p>
-                Whether you&apos;s a startup finding your footing or an
+                Whether you&apos;re a startup finding your footing or an
                 established business looking to optimize, I&apos;m here to
                 provide the clarity and guidance you need.
               </p>
