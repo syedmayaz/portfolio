@@ -37,7 +37,7 @@ export function About() {
               </p>
             </div>
             {proAdvisorBadge && (
-              <div className="mt-4">
+              <div className="mt-4 flex">
                 <Image
                   src={proAdvisorBadge.imageUrl}
                   alt={proAdvisorBadge.description}
