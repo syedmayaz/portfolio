@@ -15,7 +15,7 @@ const testimonials = [
     name: 'Sarah L.',
     title: 'Startup Founder',
     quote:
-      "syedayaz transformed our financial chaos into clarity. Their bookkeeping service is second to none, and the AI estimator was surprisingly accurate!",
+      "Syed Ayaz transformed our financial chaos into clarity. Their bookkeeping service is second to none, and the AI estimator was surprisingly accurate!",
     rating: 5,
     avatarId: 'testimonial-1',
   },
@@ -31,7 +31,7 @@ const testimonials = [
     name: 'David C.',
     title: 'E-commerce Entrepreneur',
     quote:
-      "Payroll is no longer a headache thanks to syedayaz. Their service is efficient and reliable, giving me more time to focus on growing my business.",
+      "Payroll is no longer a headache thanks to Syed Ayaz. Their service is efficient and reliable, giving me more time to focus on growing my business.",
     rating: 5,
     avatarId: 'testimonial-3',
   },
@@ -49,7 +49,7 @@ export function Testimonials() {
             What Our Clients Say
           </h2>
           <p className="mt-2 max-w-[700px] text-foreground/80 md:text-xl/relaxed">
-            Discover why business owners trust syedayaz with their finances.
+            Discover why business owners trust Syed Ayaz with their finances.
           </p>
         </div>
         <Carousel
