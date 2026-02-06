@@ -20,22 +20,18 @@ export async function sendContactEmail(formData: z.infer<typeof contactFormSchem
   const { name, email, phone, message } = parsedData.data;
 
   const {
-    EMAIL_SERVER_HOST,
-    EMAIL_SERVER_PORT,
     EMAIL_SERVER_USER,
     EMAIL_SERVER_PASSWORD,
     EMAIL_TO,
   } = process.env;
 
-  if (!EMAIL_SERVER_HOST || !EMAIL_SERVER_PORT || !EMAIL_SERVER_USER || !EMAIL_SERVER_PASSWORD || !EMAIL_TO) {
+  if (!EMAIL_SERVER_USER || !EMAIL_SERVER_PASSWORD || !EMAIL_TO) {
     console.error('Missing email environment variables');
     return { success: false, message: 'Server configuration error.' };
   }
 
   const transporter = nodemailer.createTransport({
-    host: EMAIL_SERVER_HOST,
-    port: parseInt(EMAIL_SERVER_PORT),
-    secure: false, // true for 465, false for other ports
+    service: 'hotmail',
     auth: {
       user: EMAIL_SERVER_USER,
       pass: EMAIL_SERVER_PASSWORD,
