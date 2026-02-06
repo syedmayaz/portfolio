@@ -33,7 +33,8 @@ export async function sendContactEmail(formData: z.infer<typeof contactFormSchem
   const transporter = nodemailer.createTransport({
     host: 'smtp.office365.com',
     port: 587,
-    secure: false,
+    secure: false, // This is correct for STARTTLS
+    requireTLS: true, // Enforce TLS
     auth: {
       user: EMAIL_SERVER_USER,
       pass: EMAIL_SERVER_PASSWORD,
