@@ -31,7 +31,9 @@ export async function sendContactEmail(formData: z.infer<typeof contactFormSchem
   }
 
   const transporter = nodemailer.createTransport({
-    service: 'hotmail',
+    host: 'smtp.office365.com',
+    port: 587,
+    secure: false,
     auth: {
       user: EMAIL_SERVER_USER,
       pass: EMAIL_SERVER_PASSWORD,
